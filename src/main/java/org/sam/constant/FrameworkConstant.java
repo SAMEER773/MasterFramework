@@ -1,6 +1,6 @@
 package org.sam.constant;
 
-// if we dont want to allow people to extend this  class make class as final
+// if we don't want to allow people to extend this  class make class as final
 //if we want to restrict to people for creating object create private constructor
 public final class FrameworkConstant {
 
@@ -15,3 +15,4 @@ public final class FrameworkConstant {
 	}
 
 }
+
