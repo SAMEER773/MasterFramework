@@ -7,11 +7,15 @@ public final class FrameworkConstant {
 	private FrameworkConstant() {
 
 	}
-
-	private static final String CHROMEDRIVERPATH = System.getProperty("user.dir") + "/Executables/chromedriver.exe";
+private static final String RESOURCESPATH= System.getProperty("user.dir");
+	private static final String CHROMEDRIVERPATH = RESOURCESPATH + "/Executables/chromedriver.exe";
+	private static final String CONFIGFILEPATH=RESOURCESPATH+ "/src/main/resources/Config/config.properties";
 
 	public static String CHROMEDRIVERPATH() {
 		return CHROMEDRIVERPATH;
+	}
+	public static String CONFIGFILEPATH() {
+		return CONFIGFILEPATH;
 	}
 
 }

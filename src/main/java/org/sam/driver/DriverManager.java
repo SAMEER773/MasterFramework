@@ -10,6 +10,9 @@ public final class DriverManager {
 
 	private static ThreadLocal<WebDriver> dr = new ThreadLocal<WebDriver>(); // all three method used to make thread
 	// safe
+	// to avoid to call this method if some one call this method
+	// its not affect to
+// our frame work
 
 	public static WebDriver getDriver() {
 		return dr.get();
