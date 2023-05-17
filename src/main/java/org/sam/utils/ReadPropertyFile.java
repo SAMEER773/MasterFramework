@@ -7,18 +7,19 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
+import org.sam.constant.FrameworkConstant;
+
 public class ReadPropertyFile {
 
 	private ReadPropertyFile() {
 
 	}
-
 	static FileInputStream file;
 	private static Properties properties = new Properties();
 	private static final Map<String ,String>CONFIGMAP=new HashMap<String, String>();
 	static {
 		try {
-			file = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/Config/config.properties");
+			file = new FileInputStream(FrameworkConstant.CONFIGFILEPATH().trim());
 			properties.load(file);
 			
 			/*for(Object key: properties.keySet()) {
