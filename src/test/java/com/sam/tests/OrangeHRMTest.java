@@ -16,6 +16,7 @@ public final class OrangeHRMTest extends BaseTest {
 		LoginAndLogoutUtility.login();
 		Assertions.assertThat(GetTitle.title()).isNotNull().isEqualTo("OrangeHRM");
 		LoginAndLogoutUtility.logout();
+		Assertions.assertThat(GetTitle.title()).isNotNull().isEqualTo("OrangeHRM");
 		
 		
 		

@@ -5,23 +5,18 @@
     <groups>
       <run>
         <exclude name="com.sam.tests.LoginTest"/>
+        <exclude name="com.sam.tests.ValidationOfTestCaseWithNumberOfLink"/>
+        <exclude name="com.sam.tests.HomePageTest"/>
       </run>
     </groups>
     <classes>
-      <class name="com.sam.tests.HomePageTest">
+      <class name="com.sam.tests.OrangeHRMTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="loginTest1"/>
+          <include name="loginLogoutTest"/>
         </methods>
-      </class> <!-- com.sam.tests.HomePageTest -->
-      <class name="com.sam.tests.LoginTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="loginTest1"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.sam.tests.LoginTest -->
+      </class> <!-- com.sam.tests.OrangeHRMTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

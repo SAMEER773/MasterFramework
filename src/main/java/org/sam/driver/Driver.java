@@ -1,7 +1,6 @@
 package org.sam.driver;
 
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.sam.constant.FrameworkConstant;
@@ -20,7 +19,7 @@ public class Driver {
 		}
 		
 		DriverManager.getDriver().manage().window().maximize();
-		DriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//DriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 
