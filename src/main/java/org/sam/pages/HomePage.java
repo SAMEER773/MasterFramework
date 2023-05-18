@@ -4,13 +4,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.sam.driver.DriverManager;
+import org.sam.ennum.WaitStrategy;
+import org.sam.utils.ExplicitWait;
 
 public final class HomePage {
 	
-	@FindBy(xpath = "//p[contains(text(),'Collings')]")
+	@FindBy(xpath = "//header[@class='oxd-topbar']/div[1]/div[2]/ul/li/span/p")
 	private WebElement paulCollingsDropDown;
 	
-	@FindBy(xpath = "//p[contains(text(),'Collings')]/../../ul/li[4]")
+	@FindBy(xpath = "//header[@class='oxd-topbar']/div[1]/div[2]/ul/li/ul/li[4]")
 	private WebElement logoutLink;
 	
 	
@@ -19,11 +21,13 @@ public final class HomePage {
 	}
 	
 	public HomePage paulCollingsDropDown() {
-		paulCollingsDropDown.click();
+		new ExplicitWait().click(paulCollingsDropDown, WaitStrategy.CLICKABLE);
+		
 		return this;
 	}
 	public LoginPage logoutLink() {
-		logoutLink.click();
+		new ExplicitWait().click(logoutLink, WaitStrategy.CLICKABLE);
+		
 		return new LoginPage();
 	}
 	

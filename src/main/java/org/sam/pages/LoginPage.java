@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.sam.driver.DriverManager;
+import org.sam.ennum.WaitStrategy;
+import org.sam.utils.ExplicitWait;
 
 public final class LoginPage {
 	
@@ -13,7 +15,7 @@ public final class LoginPage {
 	
 	@FindBy(name = "password")
 	private WebElement passwordTextField;
-	
+
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement loginButton;
 	
@@ -24,12 +26,12 @@ public final class LoginPage {
 	}
 	
 	public LoginPage userNameTextField(String userName) {
-		userNameTextField.sendKeys(userName);
+		new ExplicitWait().sendKeys(userNameTextField, userName, WaitStrategy.PRESENCE);
 		
 		return this;
 	}
 	public LoginPage passwordTextField(String password) {
-		passwordTextField.sendKeys(password);
+		new ExplicitWait().sendKeys(passwordTextField, password, WaitStrategy.PRESENCE);
 		return this;
 	}
 	
