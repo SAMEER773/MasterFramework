@@ -26,12 +26,12 @@ public final class LoginPage {
 	}
 	
 	public LoginPage userNameTextField(String userName) {
-		new ExplicitWait().sendKeys(userNameTextField, userName, WaitStrategy.PRESENCE);
+		new ExplicitWait().sendKeys(userNameTextField, userName, WaitStrategy.PRESENCE,"userName");
 		
 		return this;
 	}
 	public LoginPage passwordTextField(String password) {
-		new ExplicitWait().sendKeys(passwordTextField, password, WaitStrategy.PRESENCE);
+		new ExplicitWait().sendKeys(passwordTextField, password, WaitStrategy.PRESENCE,"password");
 		return this;
 	}
 	

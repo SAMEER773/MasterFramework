@@ -21,7 +21,7 @@ public class Practice {
 	@Test
 	public void test() {
 
-		System.setProperty("webdriver.chrome.driver", FrameworkConstant.CHROMEDRIVERPATH());
+		System.setProperty("webdriver.chrome.driver", FrameworkConstant.getChromeDriverPath());
 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();

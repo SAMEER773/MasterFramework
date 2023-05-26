@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-18T16:54:05 IST" name="Suite" finished-at="2023-05-18T16:54:35 IST" duration-ms="30306">
+  <suite started-at="2023-05-26T08:12:49 IST" name="Suite" finished-at="2023-05-26T08:13:27 IST" duration-ms="37968">
     <groups>
     </groups>
-    <test started-at="2023-05-18T16:54:05 IST" name="Test" finished-at="2023-05-18T16:54:35 IST" duration-ms="30306">
+    <test started-at="2023-05-26T08:12:49 IST" name="Test" finished-at="2023-05-26T08:13:27 IST" duration-ms="37968">
       <class name="com.sam.tests.OrangeHRMTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sam.tests.OrangeHRMTest@2c767a52]" started-at="2023-05-18T16:54:05 IST" name="setUp" finished-at="2023-05-18T16:54:28 IST" duration-ms="22699" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sam.tests.OrangeHRMTest@158da8e]" started-at="2023-05-26T08:12:49 IST" name="setUp" finished-at="2023-05-26T08:13:16 IST" duration-ms="26690" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginLogoutTest()[pri:0, instance:com.sam.tests.OrangeHRMTest@2c767a52]" started-at="2023-05-18T16:54:28 IST" name="loginLogoutTest" finished-at="2023-05-18T16:54:35 IST" duration-ms="7112" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sam.tests.OrangeHRMTest@158da8e]" started-at="2023-05-26T08:12:49 IST" name="setUp" finished-at="2023-05-26T08:13:17 IST" duration-ms="28404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginLogoutTest(java.lang.String,java.lang.String)[pri:0, instance:com.sam.tests.OrangeHRMTest@158da8e]" started-at="2023-05-26T08:13:16 IST" name="loginLogoutTest" data-provider="logintest" finished-at="2023-05-26T08:13:25 IST" duration-ms="8897" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginLogoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sam.tests.OrangeHRMTest@2c767a52]" started-at="2023-05-18T16:54:35 IST" name="tearDown" finished-at="2023-05-18T16:54:35 IST" duration-ms="393" status="PASS">
+        <test-method signature="loginLogoutTest(java.lang.String,java.lang.String)[pri:0, instance:com.sam.tests.OrangeHRMTest@158da8e]" started-at="2023-05-26T08:13:17 IST" name="loginLogoutTest" data-provider="logintest" finished-at="2023-05-26T08:13:26 IST" duration-ms="9086" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLogoutTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sam.tests.OrangeHRMTest@158da8e]" started-at="2023-05-26T08:13:25 IST" name="tearDown" finished-at="2023-05-26T08:13:25 IST" duration-ms="869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sam.tests.OrangeHRMTest@158da8e]" started-at="2023-05-26T08:13:26 IST" name="tearDown" finished-at="2023-05-26T08:13:27 IST" duration-ms="376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
