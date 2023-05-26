@@ -1,0 +1,16 @@
+package org.sam.ennum;
+
+public enum ConfigProperties {
+	
+	URL,
+	BROWSER,
+	USERNAME,
+	PASSWORD,
+	OVERRIDEREPORTS,
+	
+	
+	PASSEDSTEPSCREENSHOT,
+	FAILEDSTEPSCREENSHOT,
+	SKIPPEDSTEPSCREENSHOT
+
+}

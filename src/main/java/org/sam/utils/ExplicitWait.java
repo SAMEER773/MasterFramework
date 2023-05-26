@@ -5,10 +5,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sam.driver.DriverManager;
 import org.sam.ennum.WaitStrategy;
+import org.sam.report.ExtentLogger;
 
 public class ExplicitWait {
 
-	public void click(WebElement element, WaitStrategy waitstrategy) {
+	public void click(WebElement element, WaitStrategy waitstrategy, String ele) throws Exception {
 
 		if (waitstrategy==(WaitStrategy.CLICKABLE)) {
 			elementToBeClickable(element);
@@ -19,9 +20,10 @@ public class ExplicitWait {
 		}
 
 		element.click();
+		ExtentLogger.pass(ele+" is clicked",true);
 	}
 
-	public  void sendKeys(WebElement element, String value, WaitStrategy waitstrategy) {
+	public  void sendKeys(WebElement element, String value, WaitStrategy waitstrategy, String ele) {
 
 		if (waitstrategy==(WaitStrategy.CLICKABLE)) {
 			elementToBeClickable(element);
@@ -31,6 +33,12 @@ public class ExplicitWait {
 
 		}
 		element.sendKeys(value);
+		try {
+			ExtentLogger.pass(value+" is entred successfully in "+ele, true);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
 	}
 
 	private static void elementToBeClickable(WebElement forClickAction) {

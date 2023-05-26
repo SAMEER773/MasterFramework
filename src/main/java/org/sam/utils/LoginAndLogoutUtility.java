@@ -2,14 +2,15 @@ package org.sam.utils;
 
 import org.sam.pages.HomePage;
 import org.sam.pages.LoginPage;
+import org.testng.annotations.Test;
 
 public final class LoginAndLogoutUtility {
-	
-	public static void login() {
+	@Test(dataProvider = "logintest", dataProviderClass = Object.class)
+	public static void login(String username,String password) {
 		LoginPage page=new LoginPage();
 		try {
-			page.userNameTextField(ReadPropertyFile.get("userName").trim())
-			.passwordTextField(ReadPropertyFile.get("password").trim()).loginButton();
+			page.userNameTextField(username)
+			.passwordTextField(password).loginButton();
 		} catch (Exception e) {
 			
 			e.printStackTrace();
@@ -18,7 +19,7 @@ public final class LoginAndLogoutUtility {
 		
 	}
 	
-	public static void logout() {
+	public static void logout() throws Exception {
 		
 		HomePage hm=new HomePage();
 		hm.paulCollingsDropDown().logoutLink();

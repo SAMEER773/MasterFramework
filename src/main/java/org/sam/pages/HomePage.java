@@ -9,6 +9,7 @@ import org.sam.utils.ExplicitWait;
 
 public final class HomePage {
 	
+	
 	@FindBy(xpath = "//header[@class='oxd-topbar']/div[1]/div[2]/ul/li/span/p")
 	private WebElement paulCollingsDropDown;
 	
@@ -20,14 +21,17 @@ public final class HomePage {
 		PageFactory.initElements(DriverManager.getDriver(), this);
 	}
 	
-	public HomePage paulCollingsDropDown() {
-		new ExplicitWait().click(paulCollingsDropDown, WaitStrategy.CLICKABLE);
+	public HomePage paulCollingsDropDown() throws Exception {
+		new ExplicitWait().click(paulCollingsDropDown, WaitStrategy.CLICKABLE," dropdown");
+		//ExtentManager.getExtentTest().pass("Drop DOwn Clicked");
+		//ExtentLogger.pass("drop down clicked");
 		
 		return this;
 	}
-	public LoginPage logoutLink() {
-		new ExplicitWait().click(logoutLink, WaitStrategy.CLICKABLE);
-		
+	public LoginPage logoutLink() throws Exception {
+		new ExplicitWait().click(logoutLink, WaitStrategy.CLICKABLE," logoutLink");
+		//ExtentManager.getExtentTest().pass("Logout linked Clicked");
+		//ExtentLogger.pass("Logout linked Clicked");
 		return new LoginPage();
 	}
 	
